@@ -1,0 +1,60 @@
+//main: ../style.less
+
+.team {
+    background-color: @white;
+    padding: 67px 0 60px 0;
+    
+    &__title::after {
+        content: "T";
+        color: @grey;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: 0;
+        font-family: 'Roboto';
+        font-size: 247px;
+        font-weight: 700;
+        line-height: 210.64px;
+        text-transform: uppercase;
+        opacity: .2;
+    }
+}
+
+.member {
+    position: relative;
+    margin: 0;
+    padding-bottom: 40px;
+    &__photo {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__name {
+        text-align: center;
+        width: 80%;
+        background-color: @white;
+        color: @blue;
+        font-size: 1.33rem;
+        font-weight: 500;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        
+        padding: 20px 0;
+    }
+    
+    &__post {
+        display: block;
+        color: @black;
+        font-size: 1rem;
+    }
+    
+    &:hover &__photo {
+        box-shadow: 0px 0px 7px 1px rgba(173,173,173,1);
+    }
+}

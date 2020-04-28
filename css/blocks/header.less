@@ -1,0 +1,199 @@
+//main: ../style.less
+
+
+// --------
+//  Header
+// --------
+
+.header {
+    background-color: #000;
+    background-image: url(../images/header/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    min-height: 100vh;
+    
+    position: relative;
+    
+    &::before {
+        content: 'Scroll Down';
+        display: inline-block;
+        position: absolute;
+        bottom: 15vh;
+        left: calc(50% - 38.5px);
+        color: @white;
+        font-size: 0.86rem;
+        text-align: center;
+    }
+    
+    &::after {
+        content: '>';
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        bottom: 3vh;
+        left: calc(50% - 32.5px);
+        font-size: 2rem;
+        border: solid 1px @white;
+        border-radius: 50%;
+        line-height: 65px;
+        text-align: center;
+        color: @white;
+        transform: rotate(90deg);
+    }
+    
+    &__banner {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.top-bar {
+    padding-top: 2px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// -------
+// LOGO
+// -------
+
+
+.logo-wrap {
+    margin-left: 12px;
+    margin-top: 8px;
+    background-color: rgba(255,255,255,0.7);
+    
+    &__logo {
+        display: inline-block;
+        width: 67px;
+        height: 67px;
+        
+        color: @dark-white;
+        background-color: @blue;
+        
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 67px;
+        
+        text-align: center;
+        text-transform: uppercase;
+        
+        position: relative;
+        top: -8px;
+        left: -12px;
+        
+        user-select: none;
+    }
+}  
+
+
+// ------------
+//  NAVIGATION
+// ------------
+
+.nav {
+    display: flex;
+    align-items: center;
+    color: @white;
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        
+        position: relative;
+        overflow: hidden;
+        
+        padding: 30px 0;
+    }
+    
+    &__link {
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.33rem;
+        font-weight: 400;
+        
+        padding: 10px 15px;
+        
+        &::after {
+            content: '';
+            display: block;
+            height: 6px;
+            width: 100%;
+            
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            
+            background-color: @blue;
+            user-select: none;
+            transition: left .2s linear;
+        }
+        
+        &:hover&::after {
+            left: 0%;
+        }
+    }
+}
+
+// --------
+//  SOCIAL
+// --------
+
+.social {
+    
+    display: flex;
+    align-items: center;
+    color: @dark-white;
+    font-size: 1.33rem;
+    
+    
+    &__link {
+        transition: color .2s linear, transform .2s linear;
+        &+& {
+            margin-left: 24px;
+        }
+        &:hover {
+            transform: translateY(-3px);
+            color: @blue;
+        }
+    }
+}
+
+// --------
+//  BANNER
+// --------
+
+.banner {
+    
+    &__title {
+        margin: 0 0 10px 0;
+        text-align: center;
+        color: @dark-white;
+        font-size: 10.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.15rem;
+    }
+    
+    &__slogan {
+        margin: 0;
+        color: @blue;
+        font-size: 1.66rem;
+        font-weight: 500;
+        line-height: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        text-align: center;
+    }
+}
+

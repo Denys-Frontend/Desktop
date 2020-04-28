@@ -1,0 +1,78 @@
+//main: ../style.less
+
+.contact {
+    padding-top: 80px;
+    background-color: @black;
+    background-image:url(../images/contact/form-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &__title::after {
+        content: "C";
+        color: @white;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: 0;
+        font-family: 'Roboto';
+        font-size: 247px;
+        font-weight: 700;
+        line-height: 210.64px;
+        text-transform: uppercase;
+        opacity: .2;
+    }
+    
+    &__form {
+        margin-bottom: 80px;
+    }
+    
+    &__map {
+        width: 100%; 
+        height: 100%;
+    }
+    
+    .row {
+        margin-bottom: 38px;
+    }
+}
+
+.map-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+// --------
+// FORM
+// --------
+
+.form {
+    text-align: center;
+    &__input {
+        padding: 15px 10px 15px 22px;
+        background-color: transparent;
+        border: 1px solid @white;
+        width: 30%;
+        color: @white;
+        &_textarea {
+            width: 100%;
+            resize: none;
+            margin-bottom: 45px;
+        }
+    }
+    &__button {
+        text-align: center;
+        color: @white;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        min-width: 200px;
+        border: none;
+        background-color: @blue;
+    }
+}

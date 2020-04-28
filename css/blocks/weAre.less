@@ -1,0 +1,70 @@
+//main: ../style.less
+
+.weAre {
+    padding: 100px 0 80px 0;
+    background-color: @blue;
+    color: @white;
+    
+    &__title::after {
+        content: "W";
+        color: @white;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: 0;
+        font-family: 'Roboto';
+        font-size: 247px;
+        font-weight: 700;
+        line-height: 210.64px;
+        text-transform: uppercase;
+        opacity: .2;
+    }
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    
+    &__feature {
+        margin-bottom: 20px;
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 25%;
+    
+    text-align: center;
+    padding: 0 15px;
+    &__icon {
+        position: relative;
+        width: 133px;
+        height: 133px;
+        background-color: @light-blue;
+        border-radius: 50%;
+        font-size: 2.26rem;
+        text-align: center;
+        line-height: 133px;
+        margin-bottom: 16px;
+    }
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    
+    &__text {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        margin: 0;
+    }
+}
